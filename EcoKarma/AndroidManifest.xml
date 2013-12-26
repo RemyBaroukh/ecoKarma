@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eit.ecokarma"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.eit.ecokarma.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permission pour stocker des données en cache de la map -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.eit.ecokarma.permission.MAPS_RECEIVE" />
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:screenOrientation="portrait" >
+        <activity
+            android:name="com.eit.ecokarma.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eit.ecokarma.LoginActivity"
+            android:permission="android.permission.INTERNET"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.eit.ecokarma.Amis" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.APropos" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.Contact" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.Defis" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.EnterDefi" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.DefisPage" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.LeSaviezVous" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.Profil" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.eit.ecokarma.MainMenuActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.eit.ecokarma.RegisterActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA4DIuN6SeXXrebUsD_3DZzpi08WKffOC8" />
+    </application>
+
+</manifest>
